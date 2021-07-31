@@ -254,7 +254,6 @@ const ForgetText = styled.div`
 text-align: right;
 color: rgb(27,146,255);
 font-size: 13px;
-font-weight: bold;
 `
 const TextContainer = styled.div`
 display: flex;
