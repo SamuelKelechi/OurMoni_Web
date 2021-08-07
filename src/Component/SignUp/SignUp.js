@@ -1,6 +1,7 @@
 import { Button } from 'antd'
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 
 function SignUp() {
@@ -29,13 +30,12 @@ function SignUp() {
               <input placeholder="Full Name"/>
               <input placeholder="Email"/>
               <input placeholder="Password"/>
-              <ForgetText>Forget Password?</ForgetText>
             </InputContainer>
 
             <Button type="primary">Sign-Up</Button>
             <TextContainer>
-              <DontContain>Don't have an account?</DontContain>
-              <JoinContain>Join now</JoinContain>
+              <DontContain>Already have an account?</DontContain>
+              <Link to="/login"><JoinContain>Login</JoinContain></Link>
             </TextContainer>
           </RightContentHolder>
         </RightCard>
@@ -104,10 +104,16 @@ background-color: White;
 color: black;
 font-size: 25px;
 font-weight:  bolder;
+ 
+  @media screen and (max-width: 650px){
+    height: 80px;
+    width: 80px;
+  }
   @media screen and (max-width: 350px){
     height: 70px;
     width: 70px;
   }
+
 `
 const LeftContentHolder = styled.div`
 display: flex;
@@ -155,20 +161,19 @@ border-bottom: 3px solid grey;
 const RightContentHolder = styled.div`
 height: 550px;
 width: 350px;
-width: 95%;
 display: flex;
 flex-direction: column;
 align-items: center;
 
+@media screen and (max-width: 650px){
+  width: 95%;
+}
   >button {
     width: 120px;
     height: 40px;
     border-radius: 8px;
   }
- 
-  @media screen and (max-width: 650px){
-    width: 95%
-  }
+
 `
 const SingUpText = styled.div`
 font-weight: bolder;
@@ -179,7 +184,7 @@ font-size: 30px;
 `
 const SignUpLogos = styled.div`
 display: flex;
-width: 50%;
+width: 60%;
 height: 100px;
 justify-content: space-between;
 align-items: center;
@@ -195,6 +200,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: 1px solid grey;
+cursor: pointer;
+
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
@@ -208,6 +215,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: 1px solid grey;
+cursor: pointer;
+
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
@@ -221,6 +230,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: 1px solid grey;
+cursor: pointer;
+
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
@@ -232,12 +243,20 @@ font-weight: bold;
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   height: 270px;
-  width: 70%;
+  width: 90%;
   margin-top: 15px;
+  @media screen and (max-width: 1025px){
+    width: 100%;
+    height: 250px;
+    align-items: center;
+  }
   @media screen and (max-width: 650px){
     width: 100%;
+    height: 200px;
+    align-items: center;
   }
 
   >input{
@@ -245,22 +264,19 @@ const InputContainer = styled.div`
     border-radius: 8px;
     border: 1px solid darkgrey;
     padding-left: 20px;
+    width: 100%;
+
     @media screen and (max-width: 650px){
       width: 90%;
       height: 40px;
     }
-`
-const ForgetText = styled.div`
-text-align: right;
-color: rgb(27,146,255);
-font-size: 13px;
 `
 const TextContainer = styled.div`
 display: flex;
 height: 60px;
 justify-content: space-between;
 align-items: center;
-width: 203px
+width: 196px
 `
 const DontContain = styled.div`
 `
