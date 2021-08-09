@@ -2,6 +2,7 @@ import { Button } from 'antd'
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+import { TwitterOutlined, FacebookOutlined, GoogleOutlined } from '@ant-design/icons';
 
 
 function SignUp() {
@@ -21,9 +22,9 @@ function SignUp() {
           <RightContentHolder>
             <SingUpText>Sign-UP</SingUpText>
             <SignUpLogos>
-              <TwitterLogo>T</TwitterLogo>
-              <FacebookLogo>F</FacebookLogo>
-              <GoogleLogo>G</GoogleLogo>
+              <TwitterLogo><TwitterOutlined /></TwitterLogo>
+              <FacebookLogo><FacebookOutlined /></FacebookLogo>
+              <GoogleLogo><GoogleOutlined /></GoogleLogo>
             </SignUpLogos>
             <TextContain>or use your Email Account</TextContain>
             <InputContainer>
@@ -67,7 +68,7 @@ flex-wrap: wrap;
 `
 const LeftCard = styled.div`
 width: 550px;
-background-color: black;
+background-color: #212531;
 height: 700px;
 display: flex;
 flex-direction: column;
@@ -201,10 +202,13 @@ justify-content: center;
 align-items: center;
 border: 1px solid grey;
 cursor: pointer;
+color: #1890FF;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
 }
 `
 const FacebookLogo = styled.div`
@@ -216,10 +220,13 @@ justify-content: center;
 align-items: center;
 border: 1px solid grey;
 cursor: pointer;
+color: #4267B2;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
 }
 `
 const GoogleLogo = styled.div`
@@ -231,10 +238,13 @@ justify-content: center;
 align-items: center;
 border: 1px solid grey;
 cursor: pointer;
+color:  #EA4436 ;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
 }
 `
 const TextContain = styled.div`

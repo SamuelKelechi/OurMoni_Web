@@ -2,6 +2,8 @@ import React from 'react'
 import { Button } from 'antd'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+import { TwitterOutlined, FacebookOutlined, GoogleOutlined } from '@ant-design/icons';
+
 
 function Login() {
     return (
@@ -15,9 +17,9 @@ function Login() {
                     </AllocateHolder>
                     <SignText>Sign-In</SignText>
                     <SignInLogos>
-                        <TwitterLogo>T</TwitterLogo>
-                        <FacebookLogo>F</FacebookLogo>
-                        <GoogleLogo>G</GoogleLogo>
+                        <TwitterLogo><TwitterOutlined /></TwitterLogo>
+                        <FacebookLogo><FacebookOutlined /></FacebookLogo>
+                        <GoogleLogo><GoogleOutlined /></GoogleLogo>
                     </SignInLogos>
                     <TextContain>or use your Email Account</TextContain>
                     <InputContainer>
@@ -58,8 +60,9 @@ height: 100vh;
 const LoginMainWrapper = styled.div`
 height: 100%;
 width: 500px;
-background-color: grey;
+background: linear-gradient(to bottom right, #212531 180px, whitesmoke 20%, #212531 400px);
 display: flex;
+opacity: 0.9;
 justify-content: center;
 `
 const LogingHolder = styled.div`
@@ -116,7 +119,8 @@ color: white;
     margin-top: 10px
  }
  @media screen and (max-width: 780px){
-    margin-top: 10px
+    margin-top: 10px;
+    color: black;
  }
  @media screen and (max-width: 350px){
     font-size: 17px;
@@ -146,10 +150,13 @@ align-items: center;
 background-color: white;
 border: 1px solid grey;
 cursor: pointer;
+color: #1890FF;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
 }
 @media screen and (max-width: 350px){
     height: 40px;
@@ -166,10 +173,13 @@ align-items: center;
 background-color: white;
 border: 1px solid grey;
 cursor: pointer;
+color: #4267B2;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
     }
 @media screen and (max-width: 350px){
     height: 40px;
@@ -186,10 +196,13 @@ align-items: center;
 background-color: white;
 border: 1px solid grey;
 cursor: pointer;
+color:  #EA4436 ;
+font-size: 25px;
 
 @media screen and (max-width: 650px){
   height: 50px;
   width: 50px;
+  font-size: 18px;
 }
 @media screen and (max-width: 350px){
     height: 40px;
@@ -245,6 +258,7 @@ align-items: center;
 width: 203px
 `
 const DontContain = styled.div`
+color: white;
 `
 const JoinContain = styled.div`
 color: rgb(27,146,255);
@@ -261,7 +275,6 @@ padding-bottom: 15px;
 
 @media screen and (max-width: 1024px){
     height: 70px;
-    background-color: green;
     padding-bottom: 0px;
 }
 @media screen and (max-width: 650px){
